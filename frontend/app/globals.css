@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foreground: #2d2a26;
+  --color-background: #FFFCF2; /* Creamy white/yellow mix */
+  --color-accents-1: #ffffff;
+  --color-accents-2: #E8E5D7;
+  --color-accents-7: #403d39;
+  --color-accents-8: #252422;
+  --color-primary: #FFB703; /* Playful yellow */
+  --color-primary-hover: #FF9E00;
+}
+
+:root {
+  --font-primary: 'Nunito', system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Playful UI Styles */
+.vercel-panel {
+  background: var(--color-accents-1);
+  border: 3px solid var(--color-foreground);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0px var(--color-foreground);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.vercel-panel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--color-foreground);
+}
+
+.vercel-btn {
+  background: var(--color-primary);
+  color: var(--color-foreground);
+  font-weight: 800;
+  border: 3px solid var(--color-foreground);
+  border-radius: 14px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 4px 4px 0px var(--color-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vercel-btn:hover {
+  background: var(--color-primary-hover);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-foreground);
+}
+
+.vercel-btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  box-shadow: 2px 2px 0px var(--color-foreground);
+  transform: none;
+}
+
+.vercel-btn-secondary {
+  background: var(--color-accents-1);
+  color: var(--color-foreground);
+  border: 3px solid var(--color-foreground);
+  font-weight: 800;
+  border-radius: 14px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 4px 4px 0px var(--color-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vercel-btn-secondary:hover {
+  background: var(--color-accents-2);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-foreground);
+}
+
+.vercel-input {
+  background: var(--color-accents-1);
+  border: 3px solid var(--color-foreground);
+  color: var(--color-foreground);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05);
+}
+
+.vercel-input:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--color-foreground), inset 2px 2px 0px rgba(0,0,0,0.05);
+  transform: translate(-2px, -2px);
+}
+
+.subtle-text {
+  color: var(--color-accents-7);
+}
+
+/* Sonner fix for Playful style */
+[data-sonner-toast] {
+  background: var(--color-accents-1) !important;
+  border: 3px solid var(--color-foreground) !important;
+  border-radius: 16px !important;
+  color: var(--color-foreground) !important;
+  padding: 1rem !important;
+  box-shadow: 6px 6px 0px var(--color-foreground) !important;
+}
+
+[data-sonner-toast] [data-title] {
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  color: var(--color-foreground) !important;
+}
+
+[data-sonner-toast] [data-description] {
+  color: var(--color-accents-7) !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-foreground);
+  font-weight: 900;
+}
